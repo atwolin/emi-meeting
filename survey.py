@@ -48,7 +48,8 @@ def main():
     pre_attend = st.radio(
         "是否會參加會議？是則請選擇日期",
         [
-            "Yes.",
+            "Yes, and I will attend in person.",
+            "Yes, and I will participate online.",
             "No, but my parner will attend.",
             "No, but I will discuss it with the professor another day.",
         ],
@@ -63,11 +64,12 @@ def main():
     attend = st.radio(
         "是否會參加會議？是則請選擇日期",
         [
-            "Yes.",
+            "Yes, and I will attend in person.",
+            "Yes, and I will participate online.",
             "No, but my parner will attend.",
         ],
     )
-    if attend == "Yes.":
+    if attend.startswith("Yes"):
         dates = st.multiselect(
             "請選擇可以參加的日期，時間固定為 14:00 ~ 16:00 之間",
             ["10/1", "10/8", "10/15", "10/22", "10/29"],
