@@ -71,7 +71,7 @@ def main():
     )
     if attend.startswith("Yes"):
         dates = st.multiselect(
-            "請選擇可以參加的日期，時間固定為 16:00 ~ 18:00 之間",
+            "請選擇可以參加的日期，時間固定為 16:00 ~ 17:00 之間",
             ["10/14"],
         )
     else:
