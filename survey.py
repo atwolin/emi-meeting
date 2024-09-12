@@ -54,7 +54,7 @@ def main():
             "No, but I will discuss it with the professor another day.",
         ],
     )
-    when2meet_url = "https://www.when2meet.com/?26423062-49Nq8"
+    when2meet_url = "https://www.when2meet.com/?26426058-grwZy"
     components.html(
         f'<iframe src="{when2meet_url}" width="100%" height="600" frameborder="0"></iframe>',
         height=600,
