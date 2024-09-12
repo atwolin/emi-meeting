@@ -35,7 +35,7 @@ def fetch_responses():
 
 # Main app function
 def main():
-    st.title("Survey for Acadamic")
+    st.title("Survey for Meeting Attendence")
 
     # Create the form
     st.header("Feedback Form")
