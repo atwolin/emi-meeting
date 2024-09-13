@@ -55,7 +55,7 @@ def main():
             "Others.",
         ],
     )
-    if pre_attend == "Others":
+    if pre_attend == "Others.":
         pre_attend = st.text_input("Please write your answer.")
 
     when2meet_url = "https://www.when2meet.com/?26426058-grwZy"
