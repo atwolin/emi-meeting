@@ -52,13 +52,18 @@ def main():
             "Yes, and I will participate online.",
             "No, but my parner will attend.",
             "No, but I will discuss it with the professor another day.",
+            "Others."
         ],
     )
+    if pre_attend == "Others":
+        pre_attend = st.text_input("Please write your answer.")
+
     when2meet_url = "https://www.when2meet.com/?26426058-grwZy"
-    components.html(
-        f'<iframe src="{when2meet_url}" width="100%" height="600" frameborder="0"></iframe>',
-        height=600,
-    )
+    if st.checkbox("Show when2meet"):
+        components.html(
+            f'<iframe src="{when2meet_url}" width="100%" height="600" frameborder="0"></iframe>',
+            height=600,
+        )
 
     st.markdown("### For meeting with Academic Affairs Office")
     attend = st.radio(
@@ -67,6 +72,8 @@ def main():
             "Yes, and I will attend in person.",
             "Yes, and I will participate online.",
             "No, but my parner will attend.",
+            "No, but I will check the meeting minutes.",
+            "Others.",
         ],
     )
     if attend.startswith("Yes"):
@@ -74,6 +81,9 @@ def main():
             "請選擇可以參加的日期，時間固定為 16:00 ~ 17:00 之間",
             ["10/14"],
         )
+    elif attend == "Others.":
+        ans = st.text_input("")
+        dates = [ans]
     else:
         dates = ["none"]
     if st.button("Submit"):
@@ -83,13 +93,10 @@ def main():
         else:
             st.error("Please fill in all fields!")
 
-    # st.write(value)
-
     # Show the responses if the user is an admin
     if st.checkbox("Show Responses"):
         # pass
         responses = fetch_responses()
-        print(responses)
         df = pd.DataFrame(
             responses,
             columns=[
@@ -108,3 +115,4 @@ def main():
 if __name__ == "__main__":
     create_table()
     main()
+Please write your answer.
