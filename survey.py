@@ -52,7 +52,7 @@ def main():
             "Yes, and I will participate online.",
             "No, but my parner will attend.",
             "No, but I will discuss it with the professor another day.",
-            "Others."
+            "Others.",
         ],
     )
     if pre_attend == "Others":
@@ -115,4 +115,3 @@ def main():
 if __name__ == "__main__":
     create_table()
     main()
-Please write your answer.
